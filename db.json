@@ -1,59 +1,75 @@
 {
+  "cities": [
+    { "id": 1, "name": "Hyderabad", "state": "Telangana" },
+    { "id": 2, "name": "Bangalore", "state": "Karnataka" },
+    { "id": 3, "name": "Chennai", "state": "Tamil Nadu" }
+  ],
+
   "restaurants": [
     {
-      "id": 1,
+      "id": 101,
       "name": "Spicy House",
+      "cityId": 1,
       "city": "Hyderabad",
+      "rating": 4.5
+    },
+    {
+      "id": 102,
+      "name": "Food Corner",
+      "cityId": 1,
+      "city": "Hyderabad",
+      "rating": 4.2
+    },
+    {
+      "id": 103,
+      "name": "Tasty Treat",
+      "cityId": 2,
+      "city": "Bangalore",
       "rating": 4.4
     },
     {
-      "id": 2,
-      "name": "Food Corner",
-      "city": "Hyderabad",
-      "rating": 4.1
-    },
-    {
-      "id": 3,
-      "name": "Tasty Treat",
-      "city": "Bangalore",
+      "id": 104,
+      "name": "Southern Delights",
+      "cityId": 3,
+      "city": "Chennai",
       "rating": 4.3
     }
   ],
 
-  "menus": [
+  "foods": [
     {
-      "id": 1,
-      "restaurantId": 1,
+      "id": 201,
+      "restaurantId": 101,
       "item": "Chicken Biryani",
       "price": 250,
       "category": "Main Course"
     },
     {
-      "id": 2,
-      "restaurantId": 1,
+      "id": 202,
+      "restaurantId": 101,
       "item": "Paneer Butter Masala",
       "price": 220,
       "category": "Main Course"
     },
     {
-      "id": 3,
-      "restaurantId": 2,
+      "id": 203,
+      "restaurantId": 102,
       "item": "Veg Fried Rice",
       "price": 180,
       "category": "Rice"
     },
     {
-      "id": 4,
-      "restaurantId": 2,
-      "item": "Gobi Manchurian",
-      "price": 160,
-      "category": "Starters"
-    },
-    {
-      "id": 5,
-      "restaurantId": 3,
+      "id": 204,
+      "restaurantId": 103,
       "item": "Masala Dosa",
       "price": 120,
+      "category": "Breakfast"
+    },
+    {
+      "id": 205,
+      "restaurantId": 104,
+      "item": "Idli Sambar",
+      "price": 90,
       "category": "Breakfast"
     }
   ],
@@ -61,11 +77,12 @@
   "orders": [
     {
       "id": 1001,
-      "restaurantId": 1,
+      "cityId": 1,
+      "restaurantId": 101,
       "restaurantName": "Spicy House",
       "items": [
         {
-          "menuId": 1,
+          "foodId": 201,
           "item": "Chicken Biryani",
           "quantity": 1,
           "price": 250
@@ -74,22 +91,6 @@
       "totalAmount": 250,
       "status": "Order Placed",
       "orderTime": "2025-01-10T10:30:00"
-    },
-    {
-      "id": 1002,
-      "restaurantId": 2,
-      "restaurantName": "Food Corner",
-      "items": [
-        {
-          "menuId": 3,
-          "item": "Veg Fried Rice",
-          "quantity": 2,
-          "price": 180
-        }
-      ],
-      "totalAmount": 360,
-      "status": "Out for Delivery",
-      "orderTime": "2025-01-10T11:00:00"
     }
   ]
 }
