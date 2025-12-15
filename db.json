@@ -1,0 +1,22 @@
+{
+  "restaurants": [
+    { "id": 1, "name": "Spicy House", "city": "Hyderabad" },
+    { "id": 2, "name": "Food Corner", "city": "Hyderabad" },
+    { "id": 3, "name": "Tasty Treat", "city": "Bangalore" }
+  ],
+  "menus": [
+    { "id": 1, "restaurantId": 1, "item": "Chicken Biryani", "price": 250 },
+    { "id": 2, "restaurantId": 1, "item": "Paneer Butter Masala", "price": 220 },
+    { "id": 3, "restaurantId": 2, "item": "Veg Fried Rice", "price": 180 },
+    { "id": 4, "restaurantId": 3, "item": "Masala Dosa", "price": 120 }
+  ],
+  "orders": [
+    {
+      "id": 101,
+      "restaurant": "Spicy House",
+      "items": ["Chicken Biryani"],
+      "total": 250,
+      "status": "Out for Delivery"
+    }
+  ]
+}
